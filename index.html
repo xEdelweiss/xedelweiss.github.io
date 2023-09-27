@@ -25,40 +25,47 @@
     <style>
         * {
             color: #444;
+            padding: 0;
+            margin: 0;
         }
+
         html {
             font-family: 'Source Sans 3', sans-serif;
         }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            justify-content: center;
+            align-items: center;
+        }
+
         h1 {
             text-align: center;
             font-size: 3.45em;
             font-weight: 200;
         }
-        h1 a {
+
+        a {
             text-decoration: none;
         }
+
+        .love {
+            height: 1em;
+        }
+
         .paw {
             text-align: center;
             font-size: 3.2em;
         }
     </style>
 <body>
-<div class="container">
-    <div class="row">
-        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-            <h1><a href="/">Mykhailo Sverdlykivskyi</a></h1>
-        </div>
-    </div>
-</div>
 
 <div class="container">
-    <div class="row">
-        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-            <p class="paw">
-                🐾
-            </p>
-        </div>
-    </div>
+    <h1><a href="/">Mykhailo Sverdlykivskyi</a></h1>
+    <div class="love"></div>
+    <p class="paw"><a href="/">🐾</a></p>
 </div>
 
 </body>
