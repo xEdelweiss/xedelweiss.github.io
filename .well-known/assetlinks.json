@@ -1,0 +1,5 @@
+[{
+  "relation": ["delegate_permission/common.handle_all_urls"],
+  "target" : { "namespace": "android_app", "package_name": "net.xedelweiss.lesia",
+               "sha256_cert_fingerprints": ["71:29:C7:29:9E:33:2A:0F:D8:05:EA:E3:51:F5:D8:F5:CD:EC:A7:42:C6:07:E4:62:4E:48:51:7D:D3:E2:E5:5D"] }
+}]
