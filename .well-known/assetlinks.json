@@ -1,5 +1,13 @@
-[{
-  "relation": ["delegate_permission/common.handle_all_urls"],
-  "target" : { "namespace": "android_app", "package_name": "net.xedelweiss.lesia",
-               "sha256_cert_fingerprints": ["71:29:C7:29:9E:33:2A:0F:D8:05:EA:E3:51:F5:D8:F5:CD:EC:A7:42:C6:07:E4:62:4E:48:51:7D:D3:E2:E5:5D"] }
-}]
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "net.xedelweiss.lesia",
+      "sha256_cert_fingerprints": [
+        "71:29:C7:29:9E:33:2A:0F:D8:05:EA:E3:51:F5:D8:F5:CD:EC:A7:42:C6:07:E4:62:4E:48:51:7D:D3:E2:E5:5D",
+        "E4:EF:E2:E8:3D:9E:81:49:B5:1B:AE:E1:AC:1C:E4:CE:8D:C4:C0:92:82:2D:67:B0:4B:B3:BD:9D:E7:45:6E:61"
+      ]
+    }
+  }
+]
