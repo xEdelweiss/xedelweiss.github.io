@@ -1,0 +1,13 @@
+{
+  "applinks": {
+    "details": [
+      {
+        "appIDs": ["9CC262QHM2.net.xedelweiss.lesia"],
+        "components": [
+          { "/": "/poetry/lesia" },
+          { "/": "/poetry/lesia/" }
+        ]
+      }
+    ]
+  }
+}
