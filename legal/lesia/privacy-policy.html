@@ -1,12 +1,213 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta charset='utf-8'>
-  <meta name='viewport' content='width=device-width'>
-  <title>Privacy Policy</title>
-  <style> body { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; padding:1em; } </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy Policy · Леся Українка: вірші</title>
+<meta name="description" content="Privacy policy for the Lesia Ukrainka poetry app: no account, no tracking. Your favorites and reading history stay on your device.">
+<meta name="color-scheme" content="light dark">
+<link rel="icon" type="image/png" href="icon.png">
+<link rel="apple-touch-icon" href="icon.png">
+<link rel="stylesheet" href="https://fonts.bunny.net/css?family=literata:400,600|onest:400,500,600">
+<style>
+:root{
+--bg:#f3ede0;
+--ink:#26211a;
+--body:#3b352b;
+--muted:#8b8172;
+--accent:#8a362e;
+--hairline-ink:#c6bba4;
+--card:#ebe3d2;
+}
+@media (prefers-color-scheme: dark){:root{
+--bg:#17130d;
+--ink:#ece3d2;
+--body:#dbd1be;
+--muted:#7e7461;
+--accent:#c6725e;
+--hairline-ink:#4a4132;
+--card:#211b13;
+}}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--body);
+  font:400 16px/1.7 'Onest',system-ui,sans-serif;
+  -webkit-text-size-adjust:100%;-webkit-font-smoothing:antialiased}
+a{color:var(--accent);text-underline-offset:3px;text-decoration-thickness:1px}
+a:hover{color:var(--ink)}
+::selection{background:var(--accent);color:var(--bg)}
+strong{color:var(--ink);font-weight:600}
+.wrap{max-width:42rem;margin:0 auto;padding:0 clamp(16px,5vw,24px)}
+
+/* header */
+header{border-bottom:1px solid var(--hairline-ink)}
+header .wrap{height:64px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+.brand{display:flex;align-items:center;gap:12px;min-width:0;text-decoration:none;color:var(--ink)}
+/* Лого-мітка намальована під світлий фон — кладемо на світлу плитку в обох
+   темах, як на лендингу. */
+.brand img{flex:none;width:36px;height:36px;object-fit:contain;
+  background:#fbf6ec;border-radius:9px;padding:5px;
+  box-shadow:0 2px 8px rgba(0,0,0,.14)}
+.brand span{font:600 1.05rem/1.2 'Literata',Georgia,serif;
+  white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.navlink{flex:none;font-size:.9rem;font-weight:500;color:var(--muted);text-decoration:none}
+.navlink:hover{color:var(--ink)}
+
+/* hero */
+.hero{padding:3.5rem 0 2.5rem}
+.kicker{font-size:.75rem;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+h1{margin:.5rem 0 0;font:600 clamp(2rem,7vw,2.6rem)/1.15 'Literata',Georgia,serif;color:var(--ink)}
+.rule{width:44px;height:2px;margin:1.5rem 0;background:var(--accent);border-radius:1px}
+.lead{margin:0;font-size:1.08rem;line-height:1.6;text-wrap:pretty}
+.meta{margin-top:1.25rem;display:flex;flex-wrap:wrap;gap:.25rem 1.25rem;font-size:.85rem;color:var(--muted)}
+.meta b{font-weight:500;color:var(--body)}
+
+/* summary + toc */
+.summary{background:var(--card);border-radius:14px;padding:1.25rem 1.4rem;margin:0 0 2rem}
+.summary ul{margin:.6rem 0 0;padding:0;list-style:none;display:flex;flex-direction:column;gap:.45rem;color:var(--ink)}
+.summary li{display:grid;grid-template-columns:1.4rem minmax(0,1fr)}
+.summary li::before{content:"—";color:var(--accent)}
+.toc{margin:0 0 1rem}
+.toc ol{margin:.6rem 0 0;padding:0;list-style:none;columns:2 14rem;column-gap:2rem}
+.toc li{break-inside:avoid;border-bottom:1px solid var(--hairline-ink)}
+.toc a{display:grid;grid-template-columns:2rem minmax(0,1fr);padding:.45rem 0;
+  color:var(--body);text-decoration:none;font-size:.92rem;line-height:1.4}
+.toc a span{font-size:.8rem;color:var(--muted);font-variant-numeric:tabular-nums}
+.toc a:hover{color:var(--accent)}
+
+/* sections */
+section{scroll-margin-top:1.5rem;padding:2.25rem 0;border-top:1px solid var(--hairline-ink)}
+h2{margin:0 0 1rem;display:flex;gap:.8rem;align-items:baseline;
+  font:600 1.4rem/1.3 'Literata',Georgia,serif;color:var(--ink)}
+h2 span{flex:none;font:500 .85rem 'Onest',system-ui,sans-serif;color:var(--accent);font-variant-numeric:tabular-nums}
+h3{margin:1.5rem 0 .4rem;font-size:1rem;font-weight:600;color:var(--ink)}
+p{margin:0 0 1rem;text-wrap:pretty}
+ul.list{margin:0 0 1rem;padding:0 0 0 1.25rem;display:flex;flex-direction:column;gap:.35rem}
+ul.list li::marker{color:var(--accent)}
+
+.btn{display:inline-block;margin:.25rem 0 0;padding:.8rem 1.2rem;max-width:100%;
+  border:1px solid var(--accent);border-radius:8px;color:var(--ink);
+  text-decoration:none;font-weight:600;line-height:1.4;overflow-wrap:anywhere}
+.btn:hover{background:var(--card);color:var(--ink)}
+
+footer{border-top:1px solid var(--hairline-ink);margin-top:1.5rem}
+footer .wrap{padding-top:1.5rem;padding-bottom:2rem;display:flex;flex-wrap:wrap;
+  justify-content:space-between;gap:.75rem 1.5rem;font-size:.85rem;color:var(--muted)}
+footer nav{display:flex;flex-wrap:wrap;gap:.5rem 1.25rem}
+footer a{color:inherit;text-decoration:none}
+footer a:hover{color:var(--ink)}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
 </head>
 <body>
-<strong>Privacy Policy</strong><p>This privacy policy applies to the Lesia app for mobile devices, together with any related services operated by Sverdlykivskyi M (collectively, the "Application"). Sverdlykivskyi M is hereby referred to as the "Service Provider".</p><br><strong>What information does the Application obtain and how is it used?</strong><p>The Application does not collect, log, or store any personal information when you download and use it. Registration is not required. If the Application is used with an active internet connection, technical protocol data (such as your ephemeral IP address) is transmitted to facilitate network connectivity, but this data is not retained or used for tracking.</p><br><strong>Does the Application collect precise real time location information of the device?</strong><p>This Application does not collect precise information about the location of your mobile device.</p><br><strong>Do third parties see and/or have access to information obtained by the Application?</strong><p>Since the Application does not collect any information, no data is shared with third parties.</p><br><strong>What are my opt-out rights?</strong><div><p>Since the Application does not collect personal information through normal use, uninstalling it simply removes the Application from your device.</p></div><!----><p>If you contact the Service Provider directly or voluntarily provide information by other means, you may request deletion of that information by contacting support@sverdlykivskyi.net.ua.</p><br><strong>Children</strong><p>The Application is not intended for children under 16 years of age, or such higher age as required by applicable law. The Service Provider does not knowingly solicit data from children or market to them. Since the Application does not collect personal information through normal use, children's data is not at risk from use of the Application alone. If you voluntarily provide personal information through other means and are under 16 years of age, your parent or guardian must provide consent on your behalf where permitted by law.</p><br><strong>Security</strong><p>Because the Application does not collect personal data, the risk of personal data exposure is minimal. However, no security system is completely secure. The Service Provider implements reasonable safeguards to protect systems and any data it holds.</p><br><strong>Data Breach Notification</strong><p>Since the Application does not collect personal data through normal use, the risk of a data breach affecting your personal data is minimal. If a breach occurs involving any data you have voluntarily provided, the Service Provider will notify you as required by applicable law.</p><br><!----><strong>Changes</strong><p>The Service Provider may update this Privacy Policy from time to time. The Service Provider will notify you of material changes by posting the updated Privacy Policy with an effective date. Where required by law, the Service Provider will seek your consent to material changes before they take effect.</p><br><p>Previous versions of this Privacy Policy will be maintained and made available upon request by contacting the Service Provider at support@sverdlykivskyi.net.ua.</p><br><p>This privacy policy is effective as of 2026-07-29</p><br><strong>Your Consent</strong><p>If you voluntarily provide information to the Service Provider and processing is based on consent, you may withdraw that consent at any time without affecting processing carried out before withdrawal.</p><br><strong>Contact Us</strong><p>If you have any questions regarding privacy while using the Application, or have questions about the practices, please contact the Service Provider via email at support@sverdlykivskyi.net.ua.</p><hr><p><span>This privacy policy page was generated by </span><a href="https://app-privacy-policy-generator.nisrulz.com/" target="_blank" rel="noopener noreferrer">App Privacy Policy Generator</a></p>
+
+<header>
+<div class="wrap">
+<a class="brand" href="/poetry/lesia/"><img src="icon.png" alt="" width="36" height="36"><span>Леся Українка: вірші</span></a>
+<a class="navlink" href="support.html">Support</a>
+</div>
+</header>
+
+<main class="wrap">
+<div class="hero">
+<div class="kicker">Legal</div>
+<h1>Privacy Policy</h1>
+<div class="rule"></div>
+<p class="lead">Lesia Ukrainka: Poems is a quiet reading app. There's no account to make, nothing is tracked, and the app works without the internet.</p>
+<div class="meta"><span>Effective <b>13 Oct 2026</b></span><span>Last updated <b>13 Oct 2026</b></span></div>
+</div>
+
+<div class="summary">
+<div class="kicker">The short version</div>
+<ul>
+<li><span>Your favorites, reading history and settings are stored only on your device.</span></li>
+<li><span>No account, no ads, no analytics, no tracking.</span></li>
+<li><span>We never receive your data, so we have nothing to sell or share.</span></li>
+</ul>
+</div>
+
+<nav class="toc" aria-label="On this page">
+<div class="kicker">On this page</div>
+<ol>
+<li><a href="#overview"><span>01</span>Overview</a></li>
+<li><a href="#on-device"><span>02</span>What stays on your device</a></li>
+<li><a href="#not-collected"><span>03</span>What we don't collect</a></li>
+<li><a href="#sharing"><span>04</span>Sharing and links</a></li>
+<li><a href="#stores"><span>05</span>App stores</a></li>
+<li><a href="#deletion"><span>06</span>Deleting your data</a></li>
+<li><a href="#children"><span>07</span>Children</a></li>
+<li><a href="#changes"><span>08</span>Changes</a></li>
+<li><a href="#contact"><span>09</span>Contact</a></li>
+</ol>
+</nav>
+
+<section id="overview">
+<h2><span>01</span>Overview</h2>
+<p>This policy applies to the app <strong>Леся Українка: вірші</strong> (Lesia Ukrainka: Poems) for iOS and Android (the "App"), developed by Sverdlykivskyi M ("we", "us").</p>
+<p>All poems ship inside the App. You don't need to sign up, and the App doesn't send any information to us or anyone else.</p>
+</section>
+
+<section id="on-device">
+<h2><span>02</span>What stays on your device</h2>
+<p>To remember what you like and where you stopped, the App saves on your device:</p>
+<ul class="list">
+<li>your favorite poems;</li>
+<li>your reading history and last reading position;</li>
+<li>your settings, such as theme and text size.</li>
+</ul>
+<p>This information never leaves your device through the App. It may be included in your regular device backups (iCloud or Google), which you control in your device settings.</p>
+</section>
+
+<section id="not-collected">
+<h2><span>03</span>What we don't collect</h2>
+<p>We don't collect any personal information. The App has no accounts, no analytics, no advertising and no crash reporting, doesn't track you across apps or websites, and doesn't ask for access to your location, contacts, photos, camera or microphone.</p>
+</section>
+
+<section id="sharing">
+<h2><span>04</span>Sharing and links</h2>
+<p>When you choose to share a poem, the App opens your device's share sheet and you decide where it goes. Shared links point to the poem and contain no information about you.</p>
+<p>If someone opens a poem link without the App installed, our web page sends them to the App Store or Google Play. The page uses no cookies or analytics. On Android, the App can open the shared poem right after installation; this happens on the device and nothing is sent to us.</p>
+</section>
+
+<section id="stores">
+<h2><span>05</span>App stores</h2>
+<p>Apple and Google handle downloads, ratings and reviews under their own privacy policies. They may give us anonymous, aggregated statistics such as download counts, which can't identify you.</p>
+</section>
+
+<section id="deletion">
+<h2><span>06</span>Deleting your data</h2>
+<p>You're always in control of the App's data:</p>
+<ul class="list">
+<li>remove a favorite by tapping the heart again;</li>
+<li>clear your reading history in <strong>Налаштування</strong> (Settings);</li>
+<li>uninstall the App to delete everything it stored.</li>
+</ul>
+<p>If you email us, we use your message only to reply and will delete it on request.</p>
+</section>
+
+<section id="children">
+<h2><span>07</span>Children</h2>
+<p>The App is suitable for readers of all ages. It doesn't collect personal information from anyone, children included.</p>
+</section>
+
+<section id="changes">
+<h2><span>08</span>Changes</h2>
+<p>If we change this policy, we'll update this page and the date at the top.</p>
+</section>
+
+<section id="contact">
+<h2><span>09</span>Contact</h2>
+<p>Questions about this policy or your privacy? Email us.</p>
+<a class="btn" href="mailto:support@sverdlykivskyi.net.ua?subject=Lesia%20privacy">support@sverdlykivskyi.net.ua</a>
+</section>
+</main>
+
+<footer>
+<div class="wrap">
+<span>© 2026 Sverdlykivskyi M</span>
+<nav><a href="/poetry/lesia/">The app</a><a href="support.html">Support</a><a href="#overview" aria-current="page">Privacy</a></nav>
+</div>
+</footer>
+
 </body>
 </html>

@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Support · Леся Українка: вірші</title>
+<meta name="description" content="Get help with the Lesia Ukrainka poetry app: contact the developer, report a problem or a typo, and find answers to common questions.">
+<meta name="color-scheme" content="light dark">
+<link rel="icon" type="image/png" href="icon.png">
+<link rel="apple-touch-icon" href="icon.png">
+<link rel="stylesheet" href="https://fonts.bunny.net/css?family=literata:400,600|onest:400,500,600">
+<style>
+:root{
+--bg:#f3ede0;
+--ink:#26211a;
+--body:#3b352b;
+--muted:#8b8172;
+--accent:#8a362e;
+--hairline-ink:#c6bba4;
+--card:#ebe3d2;
+}
+@media (prefers-color-scheme: dark){:root{
+--bg:#17130d;
+--ink:#ece3d2;
+--body:#dbd1be;
+--muted:#7e7461;
+--accent:#c6725e;
+--hairline-ink:#4a4132;
+--card:#211b13;
+}}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--body);
+  font:400 16px/1.7 'Onest',system-ui,sans-serif;
+  -webkit-text-size-adjust:100%;-webkit-font-smoothing:antialiased}
+a{color:var(--accent);text-underline-offset:3px;text-decoration-thickness:1px}
+a:hover{color:var(--ink)}
+::selection{background:var(--accent);color:var(--bg)}
+strong{color:var(--ink);font-weight:600}
+.wrap{max-width:42rem;margin:0 auto;padding:0 clamp(16px,5vw,24px)}
+
+/* header */
+header{border-bottom:1px solid var(--hairline-ink)}
+header .wrap{height:64px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+.brand{display:flex;align-items:center;gap:12px;min-width:0;text-decoration:none;color:var(--ink)}
+/* Лого-мітка намальована під світлий фон — кладемо на світлу плитку в обох
+   темах, як на лендингу. */
+.brand img{flex:none;width:36px;height:36px;object-fit:contain;
+  background:#fbf6ec;border-radius:9px;padding:5px;
+  box-shadow:0 2px 8px rgba(0,0,0,.14)}
+.brand span{font:600 1.05rem/1.2 'Literata',Georgia,serif;
+  white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.navlink{flex:none;font-size:.9rem;font-weight:500;color:var(--muted);text-decoration:none}
+.navlink:hover{color:var(--ink)}
+
+/* hero */
+.hero{padding:3.5rem 0 2.5rem}
+.kicker{font-size:.75rem;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+h1{margin:.5rem 0 0;font:600 clamp(2rem,7vw,2.6rem)/1.15 'Literata',Georgia,serif;color:var(--ink)}
+.rule{width:44px;height:2px;margin:1.5rem 0;background:var(--accent);border-radius:1px}
+.lead{margin:0;font-size:1.08rem;line-height:1.6;text-wrap:pretty}
+.meta{margin-top:1.25rem;display:flex;flex-wrap:wrap;gap:.25rem 1.25rem;font-size:.85rem;color:var(--muted)}
+.meta b{font-weight:500;color:var(--body)}
+
+
+/* sections */
+section{scroll-margin-top:1.5rem;padding:2.25rem 0;border-top:1px solid var(--hairline-ink)}
+h2{margin:0 0 1rem;display:flex;gap:.8rem;align-items:baseline;
+  font:600 1.4rem/1.3 'Literata',Georgia,serif;color:var(--ink)}
+h2 span{flex:none;font:500 .85rem 'Onest',system-ui,sans-serif;color:var(--accent);font-variant-numeric:tabular-nums}
+h3{margin:1.5rem 0 .4rem;font-size:1rem;font-weight:600;color:var(--ink)}
+p{margin:0 0 1rem;text-wrap:pretty}
+ul.list{margin:0 0 1rem;padding:0 0 0 1.25rem;display:flex;flex-direction:column;gap:.35rem}
+ul.list li::marker{color:var(--accent)}
+code{font:.9em ui-monospace,SFMono-Regular,Menlo,monospace;color:var(--ink);overflow-wrap:anywhere}
+
+/* data table */
+.rows{margin:0 0 1rem;border-top:1px solid var(--hairline-ink)}
+.rows > div{display:grid;grid-template-columns:minmax(0,11rem) minmax(0,1fr);gap:.25rem 1.25rem;
+  padding:.7rem 0;border-bottom:1px solid var(--hairline-ink)}
+.rows > div > span:first-child{color:var(--ink);font-weight:500}
+.rows .th{font-size:.75rem;font-weight:500;letter-spacing:.08em;text-transform:uppercase}
+.rows .th span{color:var(--muted)!important}
+@media (max-width:520px){
+  .rows > div{grid-template-columns:minmax(0,1fr)}
+  .rows .th{display:none!important}
+}
+
+.btn{display:inline-block;margin:.25rem 0 0;padding:.8rem 1.2rem;max-width:100%;
+  border:1px solid var(--accent);border-radius:8px;color:var(--ink);
+  text-decoration:none;font-weight:600;line-height:1.4;overflow-wrap:anywhere}
+.btn:hover{background:var(--card);color:var(--ink)}
+
+/* faq */
+.faq{margin:0 0 1rem;border-top:1px solid var(--hairline-ink)}
+.faq details{border-bottom:1px solid var(--hairline-ink)}
+.faq summary{list-style:none;cursor:pointer;display:grid;grid-template-columns:minmax(0,1fr) 1.25rem;
+  gap:1rem;align-items:baseline;padding:.9rem 0;color:var(--ink);font-weight:500;line-height:1.45}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";font-size:1.15rem;line-height:1;color:var(--accent);text-align:right}
+.faq details[open] summary::after{content:"\2212"}
+.faq summary:focus-visible{outline:2px solid var(--accent);outline-offset:4px;border-radius:4px}
+.faq details > div{padding:0 0 .5rem}
+.hero .btn{margin-top:1.5rem}
+
+footer{border-top:1px solid var(--hairline-ink);margin-top:1.5rem}
+footer .wrap{padding-top:1.5rem;padding-bottom:2rem;display:flex;flex-wrap:wrap;
+  justify-content:space-between;gap:.75rem 1.5rem;font-size:.85rem;color:var(--muted)}
+footer nav{display:flex;flex-wrap:wrap;gap:.5rem 1.25rem}
+footer a{color:inherit;text-decoration:none}
+footer a:hover{color:var(--ink)}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<header>
+<div class="wrap">
+<a class="brand" href="/poetry/lesia/"><img src="icon.png" alt="" width="36" height="36"><span>Леся Українка: вірші</span></a>
+<a class="navlink" href="privacy-policy.html">Privacy</a>
+</div>
+</header>
+
+<main class="wrap">
+<div class="hero">
+<div class="kicker">Help</div>
+<h1>Support</h1>
+<div class="rule"></div>
+<p class="lead">Have a question, a problem, or found a typo in a poem? Email us in English or Ukrainian. We usually reply within a few days.</p>
+<a class="btn" href="mailto:support@sverdlykivskyi.net.ua?subject=Lesia%20support">support@sverdlykivskyi.net.ua</a>
+</div>
+
+<section id="faq">
+<h2><span>01</span>Common questions</h2>
+<div class="faq">
+<details>
+<summary>Do I need an account or internet?</summary>
+<div><p>No. There's no sign-up, and the app works fully offline.</p></div>
+</details>
+<details>
+<summary>Where are my favorites stored?</summary>
+<div><p>Only on your device. They're included in your regular device backups, so they move to a new phone set up from a backup. We never receive your data, so we can't restore it.</p></div>
+</details>
+<details>
+<summary>How do I clear my reading history?</summary>
+<div><p>In <strong>Налаштування</strong> (Settings), tap <strong>Очистити історію читання</strong> (Clear reading history). Your favorites stay.</p></div>
+</details>
+<details>
+<summary>A poem link didn't open the app.</summary>
+<div><p>If you've just installed the app on iPhone, go back and tap the link again. It will open the poem in the app.</p></div>
+</details>
+<details>
+<summary>Where do the texts come from?</summary>
+<div><p>The poems are checked against the academic <em>Complete Collection of Works</em> of Lesia Ukrainka (vol. 5, 2021). If you spot a typo, email us the poem's title and the line.</p></div>
+</details>
+</div>
+</section>
+
+<section id="problem">
+<h2><span>02</span>Reporting a problem</h2>
+<p>Please tell us what happened, your phone model and system version, and the app version from <strong>Налаштування → Про застосунок</strong> (Settings → About). A screenshot helps too.</p>
+<a class="btn" href="mailto:support@sverdlykivskyi.net.ua?subject=Lesia%20bug%20report">Report a problem</a>
+</section>
+
+<section id="privacy">
+<h2><span>03</span>Privacy</h2>
+<p>No account, no ads, no tracking. Your data stays on your device. See the <a href="privacy-policy.html">Privacy Policy</a>.</p>
+</section>
+</main>
+
+<footer>
+<div class="wrap">
+<span>© 2026 Sverdlykivskyi M</span>
+<nav><a href="/poetry/lesia/">The app</a><a href="#faq" aria-current="page">Support</a><a href="privacy-policy.html">Privacy</a></nav>
+</div>
+</footer>
+
+</body>
+</html>
